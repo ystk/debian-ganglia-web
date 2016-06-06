@@ -1,15 +1,86 @@
-This package was debianized by Preston Smith <psmith@foobird.net> on
-Tue, 16 Apr 2002 22:55:55 -0500.
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: ganglia-web
+Upstream-Contact: ganglia developers <ganglia-developers@lists.sourceforge.net>
+Source: git://github.com/ganglia/ganglia-web.git
 
-It was downloaded from http://www.ganglia.info
+Files: *
+Copyright: 2002-2012, Matt Massie <massie@cs.berkeley.edu>
+           2010-2012, Vladimir Vuksan <vlists@veus.hr>
+           2005-2010, Zend Technologies USA Inc. (http://www.zend.com)
+License: BSD-Ganglia
 
-Upstream Author: Matt Massie <massie@cs.berkeley.edu>
+Files: debian/*
+Copyright: 2012, Stuart Teasdale <sdt@debian.org> and
+           2012, Daniel Pocock <daniel@pocock.com.au> and
+           2002, Preston Smith <psmith@foobird.net>
+License: GPL-3+
+Comment:
+ The core Ganglia package was debianized by
+ Preston Smith <psmith@foobird.net> on
+ Tue, 16 Apr 2002 22:55:55 -0500.
+ .
+ The ganglia-web component has been split into a separate upstream
+ tarball with a release cycle independent of the core Ganglia upstream
+ releases.  The Debian artefacts from the original combined source
+ package have been adapted by Daniel Pocock <daniel@pocock.com.au>
+ on Thu, 17 May 2012 22:27:19 +0200
+ .
+ The GPL can be found in /usr/share/common-licenses/GPL-3 on your
+ Debian system.
 
-Copyright:
+Files: dwoo/*
+Copyright: 2008, Jordi Boggiano
+License: BSD-dwoo
 
-Copyright (c) 2001 by Matt Massie and The Regents of the University of California
-.  
-All rights reserved.
+Files: js/* dash/js/*
+Copyright: 2001, Robert Penner
+           2006, Google Inc
+           2011, John Resig
+           2011, The Dojo Foundation
+           2010, "Cowboy" Ben Alman
+           2006, Klaus Hartl (stilbuero.de)
+           2011, jQuery Project
+           2011, Eric Hynds
+           2007-2009, Ariel Flesler <aflesler@gmail.com>
+           2008, George McGinley Smith
+           2011, Trent Richardson
+           2005-2010, Sam Stephenson
+License: BSD
 
-On Debian GNU/Linux systems, the text of the BSD License can be found in
-/usr/share/common-licenses/BSD.
+Files: nagios/*
+Copyright: 2011, The greplin-nagios-utils Authors
+           2011, The ganglia-web Authors
+License: BSD
+
+License: BSD-Ganglia
+ Copyright (c) 2001 by Matt Massie and The Regents of the University of California
+
+License: BSD-dwoo
+ http://dwoo.org/LICENSE   Modified BSD License  (copy below)
+ .
+ Copyright (c) 2008, Dwoo / Jordi Boggiano
+ All rights reserved.
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ * Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Neither the name of Dwoo nor the names of its contributors may be 
+   used to endorse or promote products derived from this software 
+   without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY JORDI BOGGIANO ''AS IS'' AND ANY
+ EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL JORDI BOGGIANO BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+

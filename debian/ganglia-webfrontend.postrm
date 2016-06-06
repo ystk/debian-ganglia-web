@@ -1,4 +1,4 @@
-#! /bin/sh -x
+#! /bin/sh
 
 set -e
 
@@ -12,8 +12,13 @@ if [ "$1" = "purge" ]; then
     if [ "$RET" = "true" ]; then
         webserver="apache2"
 
-        if [ -h /etc/$webserver/conf.d/ganglia-webfrontend ]; then
-            rm -f /etc/$webserver/conf.d/ganglia-webfrontend
+        a2disconf ganglia-webfrontend || true
+
+        HTTPD_ETC=/etc/$webserver
+        HTTPD_CONF=$HTTPD_ETC/conf-available
+        HTTPD_CONF_GANGLIA=$HTTPD_CONF/ganglia-webfrontend.conf
+        if [ -h $HTTPD_CONF_GANGLIA ]; then
+            rm -f $HTTPD_CONF_GANGLIA
         fi
 
         if [ -x /usr/sbin/$webserver ]; then

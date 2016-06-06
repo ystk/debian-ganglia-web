@@ -1,0 +1,28 @@
+
+NMUs are welcome.  Please make sure you commit your changes
+and make a tag in the Git VCS on Alioth.
+
+We are considering merging this debian packaging effort into
+the upstream Git on github.
+
+As of 3.6.0, upstream releases taken from the github release
+page should be used:
+
+   https://github.com/ganglia/ganglia-web/releases
+
+The tarballs can be fetched like this:
+
+   wget -O ganglia-web_3.6.0.orig.tar.gz \
+      https://github.com/ganglia/ganglia-web/archive/3.6.0.tar.gz
+
+The tarballs can be imported like this:
+
+   git-import-orig -u 3.6.0 ../ganglia-web_3.6.0.orig.tar.gz \
+     --filter=debian --filter=.gitignore
+
+Making a test tarball from upstream git:
+
+   BRANCH=release/3.6 \
+   git archive --prefix ganglia-web-3.6.0/ \
+     -o ../ganglia-web_3.6.0.orig.tar.gz $BRANCH
+

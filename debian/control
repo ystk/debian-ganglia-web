@@ -1,16 +1,17 @@
-Source: ganglia-webfrontend
+Source: ganglia-web
 Section: net
 Priority: optional
-Maintainer: Jeff Buchbinder <jeff@freemedsoftware.org>
+Maintainer: Debian Monitoring Maintainers <pkg-monitoring-maintainers@lists.alioth.debian.org>
+Uploaders: Stuart Teasdale <sdt@debian.org>, Daniel Pocock <daniel@pocock.pro>
 Homepage: http://www.ganglia.info/
-Build-Depends: debhelper (>= 7.0.0), rsync, build-essential
-Standards-Version: 3.8.4
-Vcs-Git: git://github.com/vvuksan/ganglia-misc.git
-Vcs-Browser: http://github.com/vvuksan/ganglia-misc
+Build-Depends: debhelper (>= 9.0.0), po-debconf, rsync
+Standards-Version: 3.9.4
+Vcs-Git: git://git.debian.org/pkg-monitoring/ganglia-web.git
+Vcs-Browser: http://git.debian.org/?p=pkg-monitoring/ganglia-web.git;a=summary
 
 Package: ganglia-webfrontend
 Architecture: all
-Depends: ${misc:Depends}, apache | apache-ssl | apache-perl | apache2, php5 | php5-cgi | libapache2-mod-php5, rrdtool, debconf (>= 0.5), libgd2-noxpm | libgd2-xpm
+Depends: ${misc:Depends}, apache | apache-ssl | apache-perl | apache2 | httpd-cgi, php5 | php5-cgi | libapache2-mod-php5, rrdtool, debconf (>= 0.5)
 Recommends: gmetad, php5-gd
 Description: cluster monitoring toolkit - web front-end
  Ganglia is a scalable, real-time cluster monitoring environment
@@ -19,4 +20,3 @@ Description: cluster monitoring toolkit - web front-end
  .
  This package contains the PHP-based web front-end, which displays
  information gathered by 'gmetad'.
-

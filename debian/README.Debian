@@ -1,0 +1,35 @@
+ganglia-webfrontend for Debian
+------------------------------
+
+Originally packaged by Stuart Teasdale, revised by Daniel Pocock
+
+The ganglia-webfrontend package does not install any configuration
+to the web server by default.
+
+You have various choices, for example:
+
+  dpkg-reconfigure -plow ganglia-webfrontend
+
+will ask you if you want the config installed (for Apache2 only).
+
+If that is not sufficient for you, please see
+
+  /etc/ganglia-webfrontend/apache.conf
+
+You can copy or symlink it to your web server configuration directory
+as you require or use it as a starting point to make a configuration
+for an alternative web server.
+
+Troubleshooting
+---------------
+
+If the pages fail to appear at http://$YOUR_HOST/ganglia/ and you get
+a white page with many errors, please check the following:
+
+* is the PHP module enabled and does it handle the .php extension?
+* did you have leftover files from some non-standard apache or ganglia
+  installation?
+* is there free space in /var and are the necessary locations writeable?
+
+If that doesn't help, please feel free to ask on the Ganglia mailing list.
+
